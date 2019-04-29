@@ -12,7 +12,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="priem-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h1><?= Html::encode("Прием пациентов") ?></h1>
 
     <p>
         <?= Html::a('Create Priem', ['create'], ['class' => 'btn btn-success']) ?>
@@ -28,13 +28,33 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'id',
             'data',
-            'klient_id',
-            'jaloba_id',
-            'pokazatel_jal_id',
-            'pokazatel_live_id',
-            'pokazatel_zabol_id',
-            'pokazatel_osm_id',
-            'pokazatel_obsl_id',
+            [ 'attribute' => 'Фамилия',
+              'value' => 'klient.fam',
+            ],
+            [ 'attribute' => 'Имя',
+              'value' => 'klient.name',
+            ],
+            [ 'attribute' => 'Отчество',
+              'value' => 'klient.otch',
+            ],
+            [ 'attribute' => 'Жалоба',
+              'value' => 'jaloba.name',
+            ],    
+            [ 'attribute' => 'Показатель жалобы',
+              'value' => 'pokazatelJal.name',
+            ],
+            [ 'attribute' => 'Анамнез жизни ',
+              'value' => 'pokazatelLive.name',
+            ],
+            [ 'attribute' => 'Анамнез заболевания',
+              'value' => 'pokazatelZabol.name',
+            ],
+            [ 'attribute' => 'Физикальный осмотр',
+              'value' => 'pokazatelOsm.name',
+            ],
+            [ 'attribute' => 'Обледования',
+              'value' => 'pokazatelObsl.name',
+            ],
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
