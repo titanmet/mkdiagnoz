@@ -1,51 +1,42 @@
 <?php
-
 /* @var $this yii\web\View */
-
-$this->title = 'My Yii Application';
+$this->title = 'Диагноз';
+use yii\widgets\Menu;
+echo Menu::widget([
+    'items' => [
+        ['label' => 'Прием пациентов', 'url' => ['priem/index']],
+        ['label' => 'Пациенты', 'url' => ['klient/index']],
+        ['label' => 'Жалобы', 'url' => ['jaloba/index']],
+        ['label' => 'Формализация жалоб', 'url' => ['pokazatel-jal/index']],
+        ['label' => 'Формализация анамнез жизни', 'url' => ['pokazatel-live/index']],
+        ['label' => 'Формализация анамнез заболевания', 'url' => ['pokazatel-obsl/index']],
+        ['label' => 'Формализация осмотр', 'url' => ['pokazatel-osm/index']],
+        ['label' => 'Формализация обследование', 'url' => ['pokazatel-zabol/index']],
+    ],
+	    'activeCssClass'=>'active',
+        'firstItemCssClass'=>'fist-item',
+        'lastItemCssClass' =>'last-item',
+        'options' => [
+        'id'=>'menu',
+        'class' => 'menu',
+        'data-id'=>'menu',],
+]);
 ?>
 <div class="site-index">
 
     <div class="jumbotron">
-        <h1>Congratulations!</h1>
+        <h1>Диагностика заболеваний</h1>
 
-        <p class="lead">You have successfully created your Yii-powered application.</p>
-
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
+        
     </div>
 
     <div class="body-content">
 
         <div class="row">
             <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
+                
             </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
+           
             </div>
         </div>
 
